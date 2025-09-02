@@ -2,7 +2,7 @@ import React from 'react'
 
 const Sub1 = () => {
   return (
-    <div>Sub1</div>
+    <div>서브페이지1입니다.</div>
   )
 }
 

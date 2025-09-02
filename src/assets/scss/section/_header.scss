@@ -1,0 +1,115 @@
+#header{
+    @include position-fixed
+}
+.header_inner{
+    @include flex-between;
+    background-color: rgba(116,99,99,.1);
+    backdrop-filter: blur(15px);
+    padding: 15px;
+    
+
+    .header_logo{
+        font-size: 30px;
+        font-weight: 800;
+        text-transform: uppercase;
+        line-height: 1;
+        a{
+
+            em{
+                display: block;
+                font-size: 12px;
+            }
+            
+        }
+    }
+    .header_nav{
+
+        @media(max-width:800px){
+            display: none;
+
+            &.show{
+                display: block;
+
+                ul{
+                    background-color: rgba(116,99,99,.1);
+                    position: absolute;
+                    right: 0;
+                    top: 72px;
+
+                    li{
+                        display: block;
+                        text-align: center;
+
+                        a{
+                            display: inline-block;
+                            padding: 10px 20px;
+                        }
+                    }
+                }
+            }
+
+            &.show + .header_nav_mobile span::before{
+                width: 20px;
+            }
+            &.show + .header_nav_mobile span::after{
+                width: 20px;
+            }
+        }
+
+        ul{
+
+            li{
+
+                display: inline;
+                a{
+                    display: inline-block;
+                    padding: 14px;
+                }
+            }
+        }
+    }
+    .header_nav_mobile{
+        display: none;
+        width: 40px;
+        height: 40px;
+        // background-color: var(--black);
+        cursor: pointer;
+
+        @media(max-width:800px){
+            display: block;
+
+            
+        }
+
+        span{
+            display: block;
+            width: 40px;
+            height: 2px;
+            background-color: var(--black);
+            position: relative;
+            margin-top: 19px;
+
+            &::before{
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 6px;
+                width: 40px;
+                height: 2px;
+                background-color: black;
+                transition: width .3s;
+            }
+            &::after{
+                content: "";
+                position: absolute;
+                right: 0;
+                bottom: 6px;
+                width: 40px;
+                height: 2px;
+                background-color: black;
+                transition: width .3s;
+            }
+        }
+    }
+
+}
