@@ -1,8 +1,12 @@
 import React from 'react'
+import Header from '../components/Header'
+
 
 const Sub1 = () => {
   return (
-    <div>서브페이지1입니다.</div>
+    <>
+     <Header />
+    </>
   )
 }
 

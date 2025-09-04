@@ -1,8 +1,13 @@
 import React from 'react'
+import Header from '../components/Header'
+import Skill from '../components/Skill'
 
 const Sub2 = () => {
   return (
-    <div>Sub2</div>
+    <>
+        <Header />
+        <Skill />
+    </>
   )
 }
 
